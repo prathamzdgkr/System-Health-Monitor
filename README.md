@@ -24,8 +24,7 @@ system-health-monitor
 ├── analyzer.py
 ├── database.py
 │
-├── templates
-│     └── dashboard.html
+├── dashboard.html      
 │
 └── requirements.txt
 
