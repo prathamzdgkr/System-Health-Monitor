@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>System Health Monitor</title>
+</head>
+
+<body>
+
+<h1>System Health Dashboard</h1>
+
+<button onclick="loadMetrics()">Load Metrics</button>
+
+<pre id="output"></pre>
+
+<script>
+
+function loadMetrics(){
+
+fetch("/metrics")
+.then(response => response.json())
+.then(data => {
+
+document.getElementById("output").innerText =
+JSON.stringify(data, null, 2);
+
+});
+
+}
+
+</script>
+
+</body>
+
+</html>
